@@ -19,7 +19,7 @@ if(isset($_POST['submit'])){
          $_SESSION['admin_name'] = $row['name'];
          $_SESSION['admin_email'] = $row['email'];
          $_SESSION['admin_id'] = $row['id'];
-         header('location:admin_page.php');
+         header('location:admin_products.php');
 
       }elseif($row['user_type'] == 'user'){
 
@@ -50,19 +50,6 @@ if(isset($_POST['submit'])){
 
 </head>
 <body>
-
-<?php
-if(isset($message)){
-   foreach($message as $message){
-      echo '
-      <div class="message">
-         <span>'.$message.'</span>
-         <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
-      </div>
-      ';
-   }
-}
-?>
    
 <div class="form-container">
 
